@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="Adminpage.css">
+    <!-- <link rel="stylesheet" href="/css/base.css"> -->
+</head>
+<body>
+    <div class="grid">
+        <div class="banner">
+            <h1 class="title_adminpage">
+                Admin Website sellPhone
+            </h1>
+    
+    
+        </div>
+        <div class="container">
+            <ul class="menu">
+                <li class="menu-list"> Trang đích
+                    <ul class="menu-list_item">
+                        <li class="item item_link_page" onclick="suathongtin()">Sửa thông tin</li>
+                    </ul>
+                </li>
+              
+                <li class="menu-list" style="cursor: pointer;" onclick="editdanhmuc()" >Danh mục 
+                </li>
+             
+    
+                <li class="menu-list"> Sản phẩm
+                    <ul class="menu-list_item">
+                        <li class="item item_link_page" onclick="addsp()"  >Thêm Sản phẩm</li>
+                        <li class="item item_link_page" onclick="editsp()" >Sửa Sản phẩm</li>
+                        <li class="item item_link_page" onclick="deletesp()" >Xoá Sản phẩm</li>
+                    </ul>
+
+                </li>
+                <li class="menu-list"> Phân tích</li>
+               
+
+            </ul>
+                <div class="diagram">
+                  <!-- phan gioi thieu sp -->
+                     <div class="add_landingpage suathongtin">
+                       <form action="">
+                        <div class="landing-list">
+                            <span class="name-item"> Tên sản phẩm</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Giá</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Màu </span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thiết kế</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Chất liệu</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Kích thước</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> khối lượng</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thời gian ra mắt</span>
+                            <input type="date" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số Camera</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số Sim</span>
+                            <input type="number" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Kích thước MH</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Chip</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Chân sạc</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Hỗ trợ sạc</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số lượng</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Dung lượng pin</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item">Ảnh</span>
+                            <input type="file" class="inp-item inp-file">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thuộc danh mục</span>
+                           <select name="" id="" class="category_list">
+                            <option value="">Iphone</option>
+                            <option value="">Samsung</option>
+
+                           </select>
+                        </div>
+                        <input type="submit" value="Xác nhận thêm" class="add_landing_btn">
+                       </form> 
+                    </div> 
+
+                    <img src="" alt="">
+                 <!-- phan danh muc  -->
+                    <div class="item_category editdanhmuc">
+                        <form action="" class="danhmuc">
+                         <div>
+                            <div class="landing-list">
+                                <span class="name-item"> ID danh mục</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Tên Danh mục</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                              <div class="landing-list">
+                                <span class="name-item"> Xuất xứ</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                         </div>
+                            <div class="btn_category">
+                            <input type="submit" value="Thêm danh mục" class="btn_category_item">
+                            <input type="submit" value="Sửa danh mục" class="btn_category_item">
+                            <input type="submit" value="Xoá danh mục" class="btn_category_item">
+                            </div>
+                            <div class="check-listproducts-item">
+                                <span class="name-item">Xem sản phẩm trong danh mục</span>
+                            <select name="" id="" class="category_list">
+                                    <option value="">Iphone</option>
+                                    <option value="">Samsung</option>
+        
+                            </select>
+
+                            </div>
+
+                        </form>
+                        <div class="container-categorys-item">
+                            <table border="1px" class="list_category-item">
+                                <tr>
+                                    <th>STT</th>
+                                <th>ID danh mục  </th>
+                                <th>Tên danh mục</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ip</td>
+                                    <td>Iphone</td>
+                                </tr>
+                                    
+                               
+                            </table>
+                            <table border="1px" class="listproducts">
+                                <tr class="product-item">
+                                    <th>STT</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá bán</th>
+                                    <th>Thiết kế</th>
+                                    <th>Chất liệu</th>
+                                    <th>Kích thước</th>
+                                    <th>Khối lượng</th>
+                                    <th>Thời gian ra mắt</th>
+                                  
+                                    <th>Số lượng</th>
+                                    <th>...</th>
+                                </tr>
+                                <tr class="product-item">
+                                    <td>1</td>
+                                    <td>Điện thoại Iphone 14</td>
+                                    <td>10,000,000 VND</td>
+                                    <td>Hiện đại</td>
+                                    <td>Kim loại</td>
+                                    <td>150 x 70 x 7 mm</td>
+                                    <td>170 g</td>
+                                    <td>01/2024</td>                       
+                                    <td>100</td>
+                                    <th>...</th>
+                                </tr>
+                                <tr class="product-item">
+                                    <td>2</td>
+                                    <td>Điện thoại Iphone 11</td>
+                                    <td>8,000,000 VND</td>
+                                    <td>Thanh lịch</td>
+                                    <td>Kính</td>
+                                    <td>145 x 68 x 8 mm</td>
+                                    <td>160 g</td>
+                                    <td>12/2023</td>
+                               
+                                    <td>200</td>
+                                    <th>...</th>
+                                </tr>
+                            </table>
+
+
+                        </div>
+
+
+
+                    </div> 
+                 <!-- phan them sp -->
+                   <div class="add_product addsp">
+                        <form action="" class="product-form">
+                        <div class="container-item">
+                            <div class="landing-list">
+                                <span class="name-item"> Tên sản phẩm</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Giá</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Màu </span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Thiết kế</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Chất liệu</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Kích thước</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                      
+                        </div>
+                        <div class="container-item">
+                         
+                            <div class="landing-list">
+                                <span class="name-item"> khối lượng</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Thời gian ra mắt</span>
+                                <input type="date" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Số Camera</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Số Sim</span>
+                                <input type="number" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Kích thước MH</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Chip</span>
+                                <input type="text" class="inp-item">
+                            </div>
+
+                        </div>
+                        <div class="container-item">
+                          
+                           
+                            <div class="landing-list">
+                                <span class="name-item"> Chân sạc</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Hỗ trợ sạc</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Số lượng</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Dung lượng pin</span>
+                                <input type="text" class="inp-item">
+                            </div>
+                            <div class="landing-list">
+                                <span class="name-item"> Thuộc danh mục</span>
+                            <select name="" id="" class="category_list">
+                                <option value="">Iphone</option>
+                                <option value="">Samsung</option>
+
+                            </select>
+                            </div>
+                            <div>
+                                <input type="submit" value="Xác nhận thêm" class="add_landing_btn">
+                            </div>
+                      </div>
+                        
+                        
+                        </form> 
+                        <div class="danhsachssp">
+                          <H3>Danh Danh sách sản phẩm</H3>
+                            <table border="1" class="produc-list-items">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá bán</th>
+                                    <th>Thiết kế</th>
+                                    <th>Chất liệu</th>
+                                    <th>Kích thước</th>
+                                    <th>Khối lượng</th>
+                                    <th>Thời gian ra mắt</th>
+                                    <th>Số Camera</th>
+                                    <th>Số sim</th>
+                                    <th>Dung lượng pin</th>
+                                    <th>Kích thước màn hình</th>
+                                    <th>Chip</th>
+                                    <th>Chân sạc</th>
+                                    <th>Hỗ trợ sạc</th>
+                                    <th>Số lượng</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Điện thoại A</td>
+                                    <td>10,000,000 VND</td>
+                                    <td>Hiện đại</td>
+                                    <td>Kim loại</td>
+                                    <td>150 x 70 x 7 mm</td>
+                                    <td>170 g</td>
+                                    <td>01/2024</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>4000 mAh</td>
+                                    <td>6.5 inch</td>
+                                    <td>Snapdragon 888</td>
+                                    <td>USB-C</td>
+                                    <td>Sạc nhanh 25W</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Điện thoại B</td>
+                                    <td>8,000,000 VND</td>
+                                    <td>Thanh lịch</td>
+                                    <td>Kính</td>
+                                    <td>145 x 68 x 8 mm</td>
+                                    <td>160 g</td>
+                                    <td>12/2023</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3500 mAh</td>
+                                    <td>6.1 inch</td>
+                                    <td>Exynos 2100</td>
+                                    <td>Micro-USB</td>
+                                    <td>Sạc nhanh 18W</td>
+                                    <td>200</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                     </div> 
+                <!-- phan sua sp  -->
+                      <div class="add_product editsp">
+                    <form action="" class="product-form">
+                    <div class="container-item">
+                        <div class="landing-list">
+                            <span class="name-item"> Tên sản phẩm</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Giá</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Màu </span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thiết kế</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Chất liệu</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Kích thước</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                  
+                    </div>
+                    <div class="container-item">
+                     
+                        <div class="landing-list">
+                            <span class="name-item"> khối lượng</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thời gian ra mắt</span>
+                            <input type="date" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số Camera</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số Sim</span>
+                            <input type="number" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Kích thước MH</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Chip</span>
+                            <input type="text" class="inp-item">
+                        </div>
+
+                    </div>
+                    <div class="container-item">
+                      
+                       
+                        <div class="landing-list">
+                            <span class="name-item"> Chân sạc</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Hỗ trợ sạc</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số lượng</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Dung lượng pin</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thuộc danh mục</span>
+                        <select name="" id="" class="category_list">
+                            <option value="">Iphone</option>
+                            <option value="">Samsung</option>
+
+                        </select>
+                        </div>
+                        <div>
+                            <input type="submit" value="Xác nhận sửa" class="add_landing_btn">
+                        </div>
+                  </div>
+                    
+                    
+                    </form> 
+                    <div class="danhsachssp">
+                      <H3>Danh Danh sách sản phẩm</H3>
+                        <table border="1" class="produc-list-items">
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá bán</th>
+                                <th>Thiết kế</th>
+                                <th>Chất liệu</th>
+                                <th>Kích thước</th>
+                                <th>Khối lượng</th>
+                                <th>Thời gian ra mắt</th>
+                                <th>Số Camera</th>
+                                <th>Số sim</th>
+                                <th>Dung lượng pin</th>
+                                <th>Kích thước màn hình</th>
+                                <th>Chip</th>
+                                <th>Chân sạc</th>
+                                <th>Hỗ trợ sạc</th>
+                                <th>Số lượng</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Điện thoại A</td>
+                                <td>10,000,000 VND</td>
+                                <td>Hiện đại</td>
+                                <td>Kim loại</td>
+                                <td>150 x 70 x 7 mm</td>
+                                <td>170 g</td>
+                                <td>01/2024</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>4000 mAh</td>
+                                <td>6.5 inch</td>
+                                <td>Snapdragon 888</td>
+                                <td>USB-C</td>
+                                <td>Sạc nhanh 25W</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Điện thoại B</td>
+                                <td>8,000,000 VND</td>
+                                <td>Thanh lịch</td>
+                                <td>Kính</td>
+                                <td>145 x 68 x 8 mm</td>
+                                <td>160 g</td>
+                                <td>12/2023</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3500 mAh</td>
+                                <td>6.1 inch</td>
+                                <td>Exynos 2100</td>
+                                <td>Micro-USB</td>
+                                <td>Sạc nhanh 18W</td>
+                                <td>200</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                 </div>
+                 <!-- phan xoa sp -->
+                <div class="add_product deletesp">
+                    <form action="" class="product-form">
+                    <div class="container-item">
+                        <div class="landing-list">
+                            <span class="name-item"> Tên sản phẩm</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Giá</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Màu </span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thiết kế</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Chất liệu</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Kích thước</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                  
+                    </div>
+                    <div class="container-item">
+                     
+                        <div class="landing-list">
+                            <span class="name-item"> khối lượng</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thời gian ra mắt</span>
+                            <input type="date" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số Camera</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số Sim</span>
+                            <input type="number" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Kích thước MH</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Chip</span>
+                            <input type="text" class="inp-item">
+                        </div>
+
+                    </div>
+                    <div class="container-item">
+                      
+                       
+                        <div class="landing-list">
+                            <span class="name-item"> Chân sạc</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Hỗ trợ sạc</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Số lượng</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Dung lượng pin</span>
+                            <input type="text" class="inp-item">
+                        </div>
+                        <div class="landing-list">
+                            <span class="name-item"> Thuộc danh mục</span>
+                        <select name="" id="" class="category_list">
+                            <option value="">Iphone</option>
+                            <option value="">Samsung</option>
+
+                        </select>
+                        </div>
+                        <div>
+                            <input type="submit" value="Xác nhận xoá sản phẩm" class="add_landing_btn">
+                        </div>
+                  </div>
+                  
+                   
+                    </form> 
+                    <div class="danhsachssp">
+                      <H3>Danh Danh sách sản phẩm</H3>
+                        <table border="1" class="produc-list-items">
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá bán</th>
+                                <th>Thiết kế</th>
+                                <th>Chất liệu</th>
+                                <th>Kích thước</th>
+                                <th>Khối lượng</th>
+                                <th>Thời gian ra mắt</th>
+                                <th>Số Camera</th>
+                                <th>Số sim</th>
+                                <th>Dung lượng pin</th>
+                                <th>Kích thước màn hình</th>
+                                <th>Chip</th>
+                                <th>Chân sạc</th>
+                                <th>Hỗ trợ sạc</th>
+                                <th>Số lượng</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Điện thoại A</td>
+                                <td>10,000,000 VND</td>
+                                <td>Hiện đại</td>
+                                <td>Kim loại</td>
+                                <td>150 x 70 x 7 mm</td>
+                                <td>170 g</td>
+                                <td>01/2024</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>4000 mAh</td>
+                                <td>6.5 inch</td>
+                                <td>Snapdragon 888</td>
+                                <td>USB-C</td>
+                                <td>Sạc nhanh 25W</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Điện thoại B</td>
+                                <td>8,000,000 VND</td>
+                                <td>Thanh lịch</td>
+                                <td>Kính</td>
+                                <td>145 x 68 x 8 mm</td>
+                                <td>160 g</td>
+                                <td>12/2023</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3500 mAh</td>
+                                <td>6.1 inch</td>
+                                <td>Exynos 2100</td>
+                                <td>Micro-USB</td>
+                                <td>Sạc nhanh 18W</td>
+                                <td>200</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                 </div> 
+           
+                    </div>
+
+        </div>
+
+    </div>
+
+    <script src="adminpage.js"></script>
+</body>
+</html>
